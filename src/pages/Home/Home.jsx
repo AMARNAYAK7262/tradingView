@@ -3,7 +3,8 @@ import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import styles from "./Home.module.scss";
-import Table from '../../Components/Table/Table';
+import BasicTable from '../../Components/TableComp/BasicTable';
+
 
 function CenteredTabs() {
   const [value, setValue] = React.useState(0);
@@ -26,10 +27,11 @@ function CenteredTabs() {
 
 
 function Home() {
+  
   return (
-    <div>
-      {/* <CenteredTabs/> */}
-      {/* <Table/> */}
+    <div className={styles.homeLeftSide}>
+      <CenteredTabs/>
+      <BasicTable/>
     </div>
   )
 }
